@@ -2,19 +2,16 @@
 
 import character
 import puncuate
+import verb
 
-HERO = character.generate('good')
-VILLIAN = character.generate('bad')
-SUPPORT = character.generate('help')
-LOVE = character.generate('love')
+CAST = {'hero': character.generate('good'),
+        'villian': character.generate('bad'),
+        'support': character.generate('help'),
+        'love': character.generate('love')}
 
+VERB = verb.get('present')
 
-print puncuate.dec("the hero of this story is %s %s"
-                   % (HERO['first'], HERO['last']))
-print puncuate.dec("%s is fighting %s %s"
-                   % (HERO['pronouns'][0], VILLIAN['first'],
-                      VILLIAN['last']))
-print puncuate.dec("%s %s is a supporting character"
-                   % (SUPPORT['first'], SUPPORT['last']))
-print puncuate.dec("%s is interested in %s %s"
-                   % (HERO['first'], LOVE['first'], LOVE['last']))
+print puncuate.dec('%s %s %s here'
+                   % (CAST['hero']['first'],
+                      CAST['hero']['last'],
+                      VERB[1]))
