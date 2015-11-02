@@ -16,5 +16,5 @@ print puncuate.dec("%s is fighting %s %s"
                       VILLIAN['last']))
 print puncuate.dec("%s %s is a supporting character"
                    % (SUPPORT['first'], SUPPORT['last']))
-print puncuate.dec("%s is interested in %s %s."
+print puncuate.dec("%s is interested in %s %s"
                    % (HERO['first'], LOVE['first'], LOVE['last']))
